@@ -1,0 +1,16 @@
+.List-Element {
+    width: 1vw;
+    background-color: darkcyan;
+    box-sizing: border-box;
+    border: 0.1vw solid black;
+    
+}
+.List-Element:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+.List-Filler {
+    width: 0.9vw;
+    background-color: tomato;
+    
+}

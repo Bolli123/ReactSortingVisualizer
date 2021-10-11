@@ -1,0 +1,109 @@
+.Toolbar {
+    display: inline-grid;
+    grid-template-columns: 0.2fr .2fr .6fr 0.4fr;
+    background-color: darkcyan;
+    box-shadow: 0px 2px rgba(56, 56, 56, 0.398);
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+
+    width: 100%;
+    height: 8vh;
+    min-height: 50px;
+}
+.slidecontainer {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    width: 100%; /* Width of the outside container */
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0 !important;
+}
+  
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 5px;
+    background: white;
+    border-radius: 25px;
+    border: solid 1.5px black;
+    padding: 0 !important;
+    direction: rtl
+
+}
+.slider:hover {
+    opacity: 90%;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 40px;
+    padding: 0 !important;
+    background-image: url('/src/icons/lightning-bolt.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    padding: 0 !important;
+    background-image: url('/src/icons/lightning-bolt.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.Toolbar-Element {
+    color: #ffffff;
+}
+.Icon {
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    stroke: black;
+    stroke-width: 4;
+}
+.Icon:hover {
+    opacity: 90%;
+    font-size: max(5.2vh, 35px);
+    padding-left: 0.4vh;
+    padding-right: 0.4vh;
+}
+#center {
+    font-size: max(5vh, 30px); 
+}
+#left {
+    width: 10vw;
+    white-space: nowrap;
+}
+
+.Dropdown-disabled {
+    background-color: silver !important;
+}
+.Dropdown {
+    color: black !important;
+}
+.Dropdown-control:hover {
+    opacity: 90%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.Dropdown-option.is-selected {
+    background-color: #afeafc !important;
+    color: rgb(0, 0, 0);
+  }
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
