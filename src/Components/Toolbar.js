@@ -1,6 +1,6 @@
 import './Toolbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPause, faStepBackward, faStepForward, faForward, faBackward, faPlay, faBolt } from '@fortawesome/free-solid-svg-icons'
+import { faPause, faStepBackward, faStepForward, faForward, faBackward, faPlay } from '@fortawesome/free-solid-svg-icons'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import React from 'react';
