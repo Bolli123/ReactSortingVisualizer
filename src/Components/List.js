@@ -70,7 +70,7 @@ class List extends React.Component {
 		let currentIndex = list.length, randomIndex
 	
 		// While there remain elements to shuffle...
-		while (currentIndex != 0) {
+		while (currentIndex !== 0) {
 	
 			// Pick a remaining element...
 			randomIndex = Math.floor(Math.random() * currentIndex)
@@ -177,7 +177,7 @@ class List extends React.Component {
 			frameIndexes[0].push(low + i)
 			leftList.push(list[low + i])
 		}
-		for (var i = 0; i < rSize; i++) {
+		for (i = 0; i < rSize; i++) {
 			frameIndexes[1].push(middle + i + 1)
 			rightList.push(list[middle + i + 1])
 		}
@@ -198,12 +198,12 @@ class List extends React.Component {
 			}
 			index++
 		}
-		for (var i = lCount; i < lSize; i++) {
+		for (i = lCount; i < lSize; i++) {
 			frames.push({setIndex: [index, leftList[i]]}) 
 			list[index] = leftList[i]
 			index++
 		}
-		for (var i = rCount; i < rSize; i++) {
+		for (i = rCount; i < rSize; i++) {
 			frames.push({setIndex: [index, rightList[i]]})  
 			list[index] = rightList[i]
 			index++
@@ -275,13 +275,13 @@ class List extends React.Component {
 		currentframeIndex = currentframeIndex + (currentframeIndex === 0 ? 1 : (forwards ? 1 : -1))
 		var currentframe = frames[currentframeIndex]
 		// Seek
-		if (currentframe["focused"] != undefined) {
+		if (currentframe["focused"] !== undefined) {
 			for (const item of currentframe["focused"]) {
 				selected.push(item)
 			}
 		}
 		// Swap
-		else if (currentframe["swap"] != undefined) {
+		else if (currentframe["swap"] !== undefined) {
 			swapped = []
 			for (const item of currentframe["swap"]) {
 				swapped.push(item)
@@ -290,7 +290,7 @@ class List extends React.Component {
 		}
 		// Used when focus
 		// TODO: fix shit code
-		else if (currentframe["focusSwap"] != undefined) {
+		else if (currentframe["focusSwap"] !== undefined) {
 			swapped = []
 			for (const item of currentframe["focusSwap"][0]) {
 				swapped.push(item)
@@ -300,7 +300,7 @@ class List extends React.Component {
 			}
 			[list[currentframe["focusSwap"][0][0]], list[currentframe["focusSwap"][0][1]]] = [list[currentframe["focusSwap"][0][1]], list[currentframe["focusSwap"][0][0]]]
 		}
-		else if (currentframe["setIndex"] != undefined) {
+		else if (currentframe["setIndex"] !== undefined) {
 			swapped = []
 			for (const item of currentframe["setIndex"]) {
 				swapped.push(item)
@@ -317,11 +317,11 @@ class List extends React.Component {
 		e.preventDefault()
 		const { list, playing, currentframeIndex, sorted } = this.state
 		var listCpy = list.slice()
-		if (type == "play") {
+		if (type === "play") {
 			if (sorted) {
 				return
 			}
-			if (currentframeIndex == 0) {
+			if (currentframeIndex === 0) {
 				this.handleSortChange(listCpy)
 			}
 			this.createInterval()
@@ -329,10 +329,10 @@ class List extends React.Component {
 				playing: !playing
 			})
 		}
-		else if (type == "reset") {
+		else if (type === "reset") {
 			this.restartSort()
 		}
-		else if (type == "finish") {
+		else if (type === "finish") {
 			this.setState({
 				list: this.handleSortChange(listCpy),
 				currentframeIndex: LIST_LEN-1,
@@ -342,14 +342,14 @@ class List extends React.Component {
 			})
 			this.createInterval()
 		}
-		else if (type == "frameForward") {
-			if (currentframeIndex == 0) {
+		else if (type === "frameForward") {
+			if (currentframeIndex === 0) {
 				await this.handleSortChange(listCpy)
 			}
 			this.handleframes()
 		}
-		else if (type == "frameBack") {
-			if (currentframeIndex == 0) {
+		else if (type === "frameBack") {
+			if (currentframeIndex === 0) {
 				this.setState({
 					selected: [],
 					swapped: []
@@ -392,7 +392,6 @@ class List extends React.Component {
 	}
 	handleSpeedChange(newSpeed) {
 		const { playing } = this.state
-		console.log(newSpeed)
 		this.setState({
 			sortingSpeed: newSpeed
 		})

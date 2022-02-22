@@ -2,9 +2,6 @@ import React from 'react';
 import './ListElement.css';
 
 class ListElement extends React.Component {
-    constructor(props) {
-        super(props)
-    }
     infoBoxHover(e) {
         e.preventDefault()
         //var bounds = e.target.getBoundingClientRect();

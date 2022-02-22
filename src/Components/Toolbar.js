@@ -24,7 +24,7 @@ class Toolbar extends React.Component {
 	}
     handleSelection(selectedValue) {
         const { selected } = this.state
-        if (selectedValue != selected) {
+        if (selectedValue !== selected) {
             this.props.handleAlgorithmChange(selectedValue)
             this.setState({
                 selected: selectedValue
@@ -46,7 +46,7 @@ class Toolbar extends React.Component {
         }
         return (
             <div className="Toolbar">
-                <div className="Dropdown-Container" id="left" onMouseEnter={() => console.log("hello")}>
+                <div className="Dropdown-Container" id="left">
                     <Dropdown style={{color: "black"}} className="Dropdown" disabled={playing} options={dropdownOptions} onChange={(selectedValue) => this.handleSelection(selectedValue)} value={selected}/>
                 </div>
                 <div class="slidecontainer">
@@ -71,7 +71,7 @@ class Toolbar extends React.Component {
                     </button>
                     
                 </div>
-                <a className="Toolbar-Element" id="right">
+                <a href="#/" className="Toolbar-Element" id="right">
                     GitHub
                 </a>
             </div>
