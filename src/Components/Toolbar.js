@@ -71,9 +71,6 @@ class Toolbar extends React.Component {
                     </button>
                     
                 </div>
-                <a href="#/" className="Toolbar-Element" id="right">
-                    GitHub
-                </a>
             </div>
         )
     }
