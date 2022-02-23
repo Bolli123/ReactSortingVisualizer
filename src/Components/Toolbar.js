@@ -49,8 +49,8 @@ class Toolbar extends React.Component {
                 <div className="Dropdown-Container" id="left">
                     <Dropdown style={{color: "black"}} className="Dropdown" disabled={playing} options={dropdownOptions} onChange={(selectedValue) => this.handleSelection(selectedValue)} value={selected}/>
                 </div>
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value={speed} class="slider" id="myRange" onChange={(e) => this.handleSpeedChange(e)}>
+                <div className="slidecontainer">
+                    <input type="range" min="1" max="100" value={speed} className="slider" id="myRange" onChange={(e) => this.handleSpeedChange(e)}>
                     </input>
                 </div>
                 <div className="Toolbar-Element" id="center" aria-hidden="true">
