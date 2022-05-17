@@ -1,5 +1,5 @@
 # Try here #
-https://bjornt18.github.io/ReactSortingVisualizer
+https://bolli123.github.io/ReactSortingVisualizer
 
 I created this app to help myself and others better understand how sorting algorithms work.
 
