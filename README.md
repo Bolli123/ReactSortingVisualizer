@@ -21,7 +21,7 @@ I created this app to help myself and others better understand how sorting algor
 # Run locally #
 Install dependencies, in the project directory, run:
 
-### `npm install`
+### `npm ci`
 
 To start, in the project directory, run:
 
